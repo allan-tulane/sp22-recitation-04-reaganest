@@ -59,7 +59,6 @@ This solution can't be parallelized. The first counts runs the first element in 
 
 This solution cannot be parallezed due to the fact the work relies on the O(n) to access the nth element of the list. 
 
-**Enter answer here**
 
 
 ## Part 2: Sentiment analysis
