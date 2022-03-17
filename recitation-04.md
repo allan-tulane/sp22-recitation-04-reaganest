@@ -57,10 +57,6 @@ What is the problem that prevents us from easily parallelizing this solution?
 This solution can't be parallelized. The first counts runs the first element in docs 'i am sam i am' which the counts sees how many of each word there is. After that the counts runs again for the second element in docs ('sam is ham'). Because counts is counting from 0, it might overrwrite the previous counts from the first element in docs rather than adding counts from the first docs elements onto the counts of the second element docs. As a result, the final number of counts (total) for each word gets messed up where i: 0, am:0, sam: 1, ham:1 which illustrates the counts only for the second element in docs rather than the two elements combined.
 
 
-This solution cannot be parallezed due to the fact the work relies on the O(n) to access the nth element of the list. 
-
-
-
 ## Part 2: Sentiment analysis
 
 Finally, we'll adapt our approach above to perform a simple type of sentiment analysis. Given a document, rather than counting words, we will instead count the number of positive and negative terms in the document, given a predefined list of terms. E.g., if the input sentence is `it was a terrible waste of time` and the terms `terrible` and `waste` are in our list of negative terms, then the output is
